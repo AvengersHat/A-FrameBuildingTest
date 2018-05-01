@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <!--<script>
+    AFRAME.registerComponent("daydream-listener", {
+      init: function() {
+        this.el.addEventListener("trackpaddown", (e) => {
+          console.log("track down: ");
+          console.log(e);
+        })
+      }
+    })
+  
+    </script>-->
+  </head>
+  <body>
+    <a-scene>
+
+        <a-assets>
+                <a-asset-item id="toyplane" src="S2_27_plane.gltf"></a-asset-item>
+        </a-assets>
+
+      <a-entity position="8, 0, -10" rotation="0, 60, 0" gltf-model="#toyplane"></a-entity>
+      
+      <a-entity position="0, 0, 0">
+          <a-camera fov="80"></a-camera>
+      </a-entity>
+
+      <a-entity daydream-controls "hand: right" ></a-entity>
+      <!--<a-entity daydream-controls daydream-listener></a-entity>-->
+
+      <a-sky color="#b342f4"></a-sky>
+    </a-scene>
+  </body>
+</html>
